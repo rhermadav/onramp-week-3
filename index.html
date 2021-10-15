@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="index.css" >
+  <title>Document</title>
+</head>
+<body>
+  <section class="section-form ">
+    <!-- <i class="fa fa-bars icon row span-1-of-3"></i> -->
+    <!-- <img class="icon" src="./utils/patterns/pattern-lines.svg"> -->
+       <div class="row span-1-of-3 white" >
+          <!-- <h5 class="built">BUILT FOR MORDERN USE</h5> -->
+          <form>
+                <label for="name">Name</label>
+                <input class="input-text" type="text">
+                <label  for="email">Email</label> 
+                <input class="input-text" type="text">
+                <div  class="pick-text">
+                   pick a date 
+                  <input class="smalldash valuetext" type="text"> 
+                  <input class="smalldash valuetext" type="text"> 
+                  <input class="smalldash valuetext" type="text"> 
+                </div>
+                <label for="time">Time</label> 
+                  <input class="smalldash valuetext" type="text"> 
+                  <input class="smalldash valuetext" type="text"> 
+                  <input class="smalldash valuetext" type="text"> 
+                <div class="pick-text">
+                   <!-- <h5 class="left" for="minus">-</h5> -->
+                   <button id="decrement" class="left minus" ><img src="./utils/icons/icon-minus.svg"></button>
+                   <button id="increment" class="right plus"><img  src="./utils/icons/icon-plus.svg"></button>
+                   <!-- <button id="decrement">Decrement</button>
+                   <button id="increment">Increment</button> -->
+                   <!-- <h5 class="right" for="minus">+</h5> -->
+                   <!-- <input id="counterValue" class="input-text valuetext total" type="text" value="4 people"> -->
+                   <h1 id="counterValue" class="input-text valuetext ">0</h1>
+                   <!-- <label for="plus"></label> -->
+                </div>
+                <div>
+                   <button class="dicebutton">MAKE RESERVATIONS</button>
+                </div>
+          </form>
+       </div>
+  </section>
+  <script src="app.js"></script>
+</body>
+
+</html>
