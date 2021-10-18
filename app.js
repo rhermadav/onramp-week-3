@@ -14,7 +14,7 @@ let increment = document.querySelector("#increment");
 let decrement = document.querySelector("#decrement");
 let counterValue = document.querySelector("#counterValue");
 
-let counter = 0;
+let counter = 1;
 increment.addEventListener("click" , (e)=>{
   e.preventDefault();
     counter++;
@@ -24,8 +24,8 @@ increment.addEventListener("click" , (e)=>{
 decrement.addEventListener("click" , (e)=>{
   e.preventDefault();
    
-    if(counter<=0){
-      counter = 0;
+    if(counter<=1){
+      counter = 1;
       counterValue.innerText = `${counter}people`;
     }else{
       counter--;
@@ -33,4 +33,42 @@ decrement.addEventListener("click" , (e)=>{
     }
     
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.modal-button')
+  .addEventListener('click', e => {
+    // render the modal
+    e.preventDefault();
+    renderModal();
+  })
+});
+
+function removeModal(){
+  // find the modal and remove if it exists
+  const modal = document.querySelector('.modal')
+  if (modal) {
+    modal.remove()
+  }
+}
+
+function renderModal(element){
+  // create the background modal div
+  const modal = document.createElement('div')
+  modal.classList.add('modal')
+  // create the inner modal div with appended argument
+  const child = document.createElement('div')
+  child.className='child'
+  child.innerHTML = `<h1 >THANKS FOR MAKING YOUR RESERVATION</h1>`
+  // render the modal with child on DOM
+  modal.appendChild(child)
+  document.body.appendChild(modal)
+
+  // remove modal if background clicked
+  modal.addEventListener('click', event => {
+    if (event.target.className === 'modal') {
+      removeModal()
+    }
+  })
+}
+
 
